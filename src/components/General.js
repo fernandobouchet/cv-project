@@ -43,13 +43,15 @@ class General extends Component {
             onChange={this.handleChange}
             placeholder="Last Name"
           ></input>
-          <input
-            type="text"
-            name="title"
-            onChange={this.handleChange}
-            placeholder="Title"
-            className="form-left-input"
-          ></input>
+          <div id="title-div">
+            <input
+              type="text"
+              name="title"
+              onChange={this.handleChange}
+              placeholder="Title"
+              className="form-left-input"
+            ></input>
+          </div>
         </form>
       </div>
     );

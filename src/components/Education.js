@@ -32,30 +32,40 @@ class Education extends Component {
       <div>
         <h2>EDUCATION</h2>
         <div className="education-container main">
-          <input
-            type="text"
-            name="institution"
-            onChange={this.handleChange}
-            placeholder="Institution Name"
-          ></input>
-          <input
-            type="text"
-            name="degree"
-            onChange={this.handleChange}
-            placeholder="Degree"
-          ></input>
-          <input
-            type="text"
-            name="from"
-            onChange={this.handleChange}
-            placeholder="From"
-          ></input>
-          <input
-            type="text"
-            name="to"
-            onChange={this.handleChange}
-            placeholder="To"
-          ></input>
+          <form autoComplete="off">
+            <div className="name-titles">
+              <input
+                type="text"
+                name="institution"
+                onChange={this.handleChange}
+                placeholder="Institution Name"
+              ></input>
+            </div>
+            <div className="more-info-container">
+              <div className="year-container">
+                <input
+                  type="text"
+                  name="from"
+                  onChange={this.handleChange}
+                  placeholder="From"
+                ></input>
+                -
+                <input
+                  type="text"
+                  name="to"
+                  onChange={this.handleChange}
+                  placeholder="To"
+                ></input>
+              </div>
+              |
+              <input
+                type="text"
+                name="degree"
+                onChange={this.handleChange}
+                placeholder="Degree"
+              ></input>
+            </div>
+          </form>
         </div>
       </div>
     );

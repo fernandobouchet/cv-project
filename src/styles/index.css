@@ -41,9 +41,17 @@ input {
 }
 
 textarea {
+  resize: none;
   border-style: none;
   background-color: inherit;
   font-family: inherit;
+  width: 20rem;
+  height: 1rem;
+}
+
+.education-container {
+  display: flex;
+  flex-direction: column;
 }
 
 #main-left {
@@ -56,10 +64,25 @@ textarea {
   padding: 1rem;
 }
 
+.general-container {
+  transform: rotate(270deg);
+  margin-top: 10rem;
+}
+
+.general-container form input {
+  font-size: 40px;
+  width: 20rem;
+}
+
+#title-div input {
+  font-size: 25px;
+  width: 20rem;
+}
+
 #main-right {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  text-align: start;
   background-color: white;
   color: black;
   padding: 1rem;
@@ -67,4 +90,20 @@ textarea {
 
 .form-left-input {
   color: white;
+}
+
+.info-container {
+  display: flex;
+}
+
+.year-container input {
+  width: 2rem;
+}
+
+.more-info-container {
+  display: flex;
+}
+
+#experience-form {
+  display: flex;
 }
