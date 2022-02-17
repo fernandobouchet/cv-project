@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -62,6 +63,7 @@ textarea {
   background-color: black;
   color: white;
   padding: 1rem;
+  text-align: initial;
 }
 
 .general-container {
@@ -69,14 +71,18 @@ textarea {
   margin-top: 10rem;
 }
 
-.general-container form input {
+.general-container h2 {
+  margin: 0;
   font-size: 40px;
   width: 20rem;
+  font-weight: 400;
 }
 
-#title-div input {
+.general-container h3 {
+  margin: 0;
   font-size: 25px;
   width: 20rem;
+  font-weight: 400;
 }
 
 #main-right {
