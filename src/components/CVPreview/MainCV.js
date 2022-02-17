@@ -12,7 +12,7 @@ class MainCV extends Component {
       <div id="cv-container">
         <div id="main-left">
           <General general={this.props.allData} />
-          <Contact />
+          <Contact general={this.props.allData} />
         </div>
         <div id="main-right">
           <About />

@@ -41,6 +41,8 @@ class Contact extends Component {
               className="form-left-input"
               onChange={this.handleChange}
               placeholder="Email"
+              disabled={true}
+              defaultValue={this.props.general.contactData.email}
             ></input>
             <input
               type="text"
@@ -48,6 +50,8 @@ class Contact extends Component {
               className="form-left-input"
               onChange={this.handleChange}
               placeholder="Phone"
+              disabled={true}
+              defaultValue={this.props.general.contactData.phone}
             ></input>
             <input
               type="text"
@@ -55,6 +59,8 @@ class Contact extends Component {
               className="form-left-input"
               onChange={this.handleChange}
               placeholder="Linkedin"
+              disabled={true}
+              defaultValue={this.props.general.contactData.linkedin}
             ></input>
             <input
               type="text"
@@ -62,6 +68,8 @@ class Contact extends Component {
               className="form-left-input"
               onChange={this.handleChange}
               placeholder="Github"
+              disabled={true}
+              defaultValue={this.props.general.contactData.github}
             ></input>
             <input
               type="text"
@@ -69,6 +77,8 @@ class Contact extends Component {
               className="form-left-input"
               onChange={this.handleChange}
               placeholder="Porfolio"
+              disabled={true}
+              defaultValue={this.props.general.contactData.porfolio}
             ></input>
           </form>
         </div>

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class Form extends Component {
+class FormGeneral extends Component {
   constructor(props) {
     super(props);
 
@@ -31,6 +31,7 @@ class Form extends Component {
         firstName: "",
         lastName: "",
         title: "",
+        phone: "",
       },
     });
   };
@@ -74,4 +75,4 @@ class Form extends Component {
   }
 }
 
-export default Form;
+export default FormGeneral;

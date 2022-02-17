@@ -13,27 +13,34 @@ class Main extends Component {
           lastName: "",
           title: "",
         },
+        contactData: {
+          email: "",
+          phone: "",
+          linkedin: "",
+          github: "",
+          porfolio: "",
+        },
       },
     };
   }
 
   updateState = (data) => {
-    console.log(data);
     this.setState({
       mainData: {
         ...this.state.mainData,
-        generalData: { ...data },
+        ...data,
       },
     });
+    console.log(this.state);
   };
 
   render() {
     const { mainData } = this.state;
     return (
-      <>
+      <div id="main-container">
         <MainForm getAllData={this.updateState} />
         <MainCV allData={mainData} />
-      </>
+      </div>
     );
   }
 }

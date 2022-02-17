@@ -1,11 +1,13 @@
 import React, { Component } from "react";
-import Form from "./Form";
+import FormContact from "./Form_Contact";
+import FormGeneral from "./Form_General";
 
 class MainForm extends Component {
   render() {
     return (
       <div id="form-container">
-        <Form generalInfo={this.props.getAllData} />
+        <FormGeneral generalInfo={this.props.getAllData} />
+        <FormContact generalInfo={this.props.getAllData} />
       </div>
     );
   }
