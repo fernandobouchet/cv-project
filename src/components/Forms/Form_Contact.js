@@ -27,23 +27,11 @@ class FormContact extends Component {
     );
   };
 
-  onSubmitTask = (e) => {
-    this.setState({
-      contactData: {
-        email: "",
-        phone: "",
-        linkedin: "",
-        github: "",
-        porfolio: "",
-      },
-    });
-  };
-
   render() {
     const { contactData } = this.state;
 
     return (
-      <div className="general-form-container">
+      <div className="contact-form-container">
         <form autoComplete="off">
           <input
             type="text"

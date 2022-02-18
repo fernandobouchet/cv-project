@@ -1,34 +1,15 @@
 import React, { Component } from "react";
+import "./styles/About.css";
 
 class About extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      about: "",
-    };
-  }
-
-  handleChange = (e) => {
-    this.setState({
-      about: e.target.value,
-    });
-  };
-
-  onSubmitTask = (e) => {
-    this.setState({
-      about: "",
-    });
-  };
-
   render() {
     return (
-      <div>
+      <div className="about-container">
         <h2>ABOUT ME</h2>
-        <div className="about-container main">
+        <div>
           <textarea
-            onChange={this.handleChange}
-            placeholder="Description"
+            className="about-text-area"
+            defaultValue={this.props.general.about}
           ></textarea>
         </div>
       </div>

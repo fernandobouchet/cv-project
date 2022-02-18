@@ -1,0 +1,8 @@
+.about-text-area {
+  resize: none;
+  border-style: none;
+  background-color: inherit;
+  font-family: inherit;
+  width: 20rem;
+  height: 10rem;
+}

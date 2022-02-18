@@ -25,17 +25,6 @@ class FormGeneral extends Component {
     );
   };
 
-  onSubmitTask = (e) => {
-    this.setState({
-      generalData: {
-        firstName: "",
-        lastName: "",
-        title: "",
-        phone: "",
-      },
-    });
-  };
-
   render() {
     const { generalData } = this.state;
 
