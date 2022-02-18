@@ -20,6 +20,7 @@ class Main extends Component {
           github: "",
           porfolio: "",
         },
+        about: "",
       },
     };
   }

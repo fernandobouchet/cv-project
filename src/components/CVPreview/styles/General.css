@@ -1,0 +1,16 @@
+.general-container {
+  transform: rotate(270deg);
+  margin-top: 10rem;
+  text-align: initial;
+}
+
+.general-name {
+  font-size: 2.8rem;
+  font-weight: 300;
+  margin: 0.5rem;
+}
+
+.general-title {
+  font-weight: 300;
+  margin: 0.5rem;
+}

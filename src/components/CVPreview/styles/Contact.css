@@ -1,0 +1,13 @@
+.contact-container {
+  text-align: initial;
+}
+
+.contact-title {
+  text-align: center;
+}
+
+.contact {
+  font-weight: 300;
+  font-size: 0.8rem;
+  margin: 0.3rem;
+}

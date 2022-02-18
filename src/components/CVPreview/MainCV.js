@@ -15,10 +15,10 @@ class MainCV extends Component {
           <Contact general={this.props.allData} />
         </div>
         <div id="main-right">
-          <About />
-          <Education />
-          <Experience />
-          <Skills />
+          <About general={this.props.allData} />
+          <Education general={this.props.allData} />
+          <Experience general={this.props.allData} />
+          <Skills general={this.props.allData} />
         </div>
       </div>
     );
