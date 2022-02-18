@@ -22,7 +22,7 @@ class FormAbout extends Component {
   render() {
     return (
       <div className="about-form-container">
-        <h2>ABOUT ME</h2>
+        <h2>About</h2>
         <div className="about-container">
           <textarea
             onChange={this.handleChange}

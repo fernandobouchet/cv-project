@@ -32,7 +32,7 @@ textarea {
   background-color: inherit;
   font-family: inherit;
   width: 20rem;
-  height: 1rem;
+  height: 10rem;
 }
 
 .education-container {
@@ -82,4 +82,10 @@ textarea {
 #main-container {
   display: flex;
   padding: 1%;
+  gap: 1rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
 }

@@ -32,7 +32,8 @@ class FormContact extends Component {
 
     return (
       <div className="contact-form-container">
-        <form autoComplete="off">
+        <h2>Contact</h2>
+        <form className="form" autoComplete="off">
           <input
             type="text"
             name="email"

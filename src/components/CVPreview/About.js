@@ -10,6 +10,7 @@ class About extends Component {
           <textarea
             className="about-text-area"
             defaultValue={this.props.general.about}
+            disabled={true}
           ></textarea>
         </div>
       </div>

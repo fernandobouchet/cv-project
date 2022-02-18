@@ -30,7 +30,8 @@ class FormGeneral extends Component {
 
     return (
       <div className="general-form-container">
-        <form autoComplete="off">
+        <h2>Personal Info</h2>
+        <form className="form" autoComplete="off">
           <input
             type="text"
             name="firstName"
