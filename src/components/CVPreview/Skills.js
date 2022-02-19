@@ -7,7 +7,7 @@ class Skills extends Component {
         <h2>SKILLS</h2>
         <div className="skills-container main">
           <ul>
-            <li>{this.props.general.skills}</li>
+            <li className="cv-li">{this.props.general.skills}</li>
           </ul>
         </div>
       </div>
