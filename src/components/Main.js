@@ -27,6 +27,14 @@ class Main extends Component {
           from: "",
           to: "",
         },
+        experience: {
+          company: "",
+          position: "",
+          from: "",
+          to: "",
+          description: "",
+        },
+        skills: "",
       },
     };
   }

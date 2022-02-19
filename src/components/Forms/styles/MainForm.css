@@ -1,11 +1,16 @@
 #form-container {
   background-color: white;
   border-radius: 15px;
-  padding: 2rem;
+  padding: 1rem;
+  width: 20rem;
 }
 
 .form-container {
   border-bottom-style: solid;
   padding-bottom: 1rem;
   text-align: initial;
+}
+
+.skills-container {
+  border-style: none;
 }

@@ -28,44 +28,42 @@ class FormEducation extends Component {
 
   render() {
     return (
-      <div>
+      <div className="education-form-container form-container">
         <h2>Education</h2>
-        <div className="education-form-container form-container">
-          <form className="form" autoComplete="off">
-            <div className="name-titles">
+        <form className="form" autoComplete="off">
+          <div className="name-titles">
+            <input
+              type="text"
+              name="institution"
+              onChange={this.handleChange}
+              placeholder="Institution Name"
+            ></input>
+          </div>
+          <div className="more-info-container">
+            <div className="year-container">
               <input
                 type="text"
-                name="institution"
+                name="from"
                 onChange={this.handleChange}
-                placeholder="Institution Name"
+                placeholder="From"
               ></input>
-            </div>
-            <div className="more-info-container">
-              <div className="year-container">
-                <input
-                  type="text"
-                  name="from"
-                  onChange={this.handleChange}
-                  placeholder="From"
-                ></input>
-                -
-                <input
-                  type="text"
-                  name="to"
-                  onChange={this.handleChange}
-                  placeholder="To"
-                ></input>
-              </div>
-              |
+              -
               <input
                 type="text"
-                name="degree"
+                name="to"
                 onChange={this.handleChange}
-                placeholder="Degree"
+                placeholder="To"
               ></input>
             </div>
-          </form>
-        </div>
+            |
+            <input
+              type="text"
+              name="degree"
+              onChange={this.handleChange}
+              placeholder="Degree"
+            ></input>
+          </div>
+        </form>
       </div>
     );
   }

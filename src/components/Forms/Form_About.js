@@ -12,7 +12,7 @@ class FormAbout extends Component {
   handleChange = (e) => {
     this.setState(
       {
-        ...this.state.contactData,
+        ...this.state,
         about: e.target.value,
       },
       () => this.props.generalInfo(this.state)

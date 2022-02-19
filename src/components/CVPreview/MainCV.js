@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./styles/MainCV.css";
 import General from "./General";
 import About from "./About";
 import Contact from "./Contact";
