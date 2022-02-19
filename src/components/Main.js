@@ -21,6 +21,12 @@ class Main extends Component {
           porfolio: "",
         },
         about: "",
+        education: {
+          institution: "",
+          degree: "",
+          from: "",
+          to: "",
+        },
       },
     };
   }

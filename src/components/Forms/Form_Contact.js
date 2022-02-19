@@ -31,7 +31,7 @@ class FormContact extends Component {
     const { contactData } = this.state;
 
     return (
-      <div className="contact-form-container">
+      <div className="contact-form-container form-container">
         <h2>Contact</h2>
         <form className="form" autoComplete="off">
           <input

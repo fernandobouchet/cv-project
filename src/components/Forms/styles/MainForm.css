@@ -1,0 +1,11 @@
+#form-container {
+  background-color: white;
+  border-radius: 15px;
+  padding: 2rem;
+}
+
+.form-container {
+  border-bottom-style: solid;
+  padding-bottom: 1rem;
+  text-align: initial;
+}

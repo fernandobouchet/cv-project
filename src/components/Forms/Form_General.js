@@ -29,7 +29,7 @@ class FormGeneral extends Component {
     const { generalData } = this.state;
 
     return (
-      <div className="general-form-container">
+      <div className="general-form-container form-container">
         <h2>Personal Info</h2>
         <form className="form" autoComplete="off">
           <input
