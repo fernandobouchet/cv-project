@@ -1,5 +1,21 @@
 .cv-h3,
 .cv-li {
-  font-size: 1rem;
+  font-size: 9px;
   font-weight: 300;
+  line-height: 0;
+}
+
+h2 {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.text-area {
+  resize: none;
+  border-style: none;
+  background-color: inherit;
+  font-family: inherit;
+  font-size: 9px;
+  width: 20rem;
+  height: 10rem;
 }

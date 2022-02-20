@@ -18,6 +18,7 @@ class Experience extends Component {
               <textarea
                 type="text"
                 name="description"
+                className="text-area"
                 defaultValue={this.props.general.experience.description}
                 disabled={true}
               ></textarea>

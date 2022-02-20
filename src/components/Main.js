@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import MainCV from "./CVPreview/MainCV";
 import MainForm from "./Forms/MainForm";
+import SubmitButton from "./SubmitButton";
 
 class Main extends Component {
   constructor(props) {
@@ -52,9 +53,12 @@ class Main extends Component {
   render() {
     const { mainData } = this.state;
     return (
-      <div id="main-container">
-        <MainForm getAllData={this.updateState} />
-        <MainCV allData={mainData} />
+      <div>
+        <div id="main-container">
+          <MainForm getAllData={this.updateState} />
+          <MainCV allData={mainData} />
+        </div>
+        <SubmitButton getAllData={this.updateState} />
       </div>
     );
   }
