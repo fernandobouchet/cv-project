@@ -33,8 +33,6 @@ class FormGeneral extends Component {
   };
 
   render() {
-    const { generalData } = this.state;
-
     return (
       <div className="general-form-container form-container">
         <div className="title-container">
@@ -51,7 +49,7 @@ class FormGeneral extends Component {
               onChange={(e) => {
                 this.handleChange(e);
               }}
-              value={generalData.firstName}
+              value={this.props.allData.generalData.firstName}
               placeholder="First Name"
             ></input>
             <input
@@ -60,7 +58,7 @@ class FormGeneral extends Component {
               onChange={(e) => {
                 this.handleChange(e);
               }}
-              value={generalData.lastName}
+              value={this.props.allData.generalData.lastName}
               placeholder="Last Name"
             ></input>
             <input
@@ -69,7 +67,7 @@ class FormGeneral extends Component {
               onChange={(e) => {
                 this.handleChange(e);
               }}
-              value={generalData.title}
+              value={this.props.allData.generalData.title}
               placeholder="Title"
             ></input>
           </form>

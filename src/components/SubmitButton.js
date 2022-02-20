@@ -34,7 +34,6 @@ class SubmitButton extends Component {
   };
 
   handleClick = () => {
-    console.log(this.exampleData);
     this.props.getAllData(this.exampleData);
   };
 

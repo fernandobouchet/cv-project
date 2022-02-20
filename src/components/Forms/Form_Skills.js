@@ -42,6 +42,7 @@ class FormSkills extends Component {
                 type="text"
                 name="skill"
                 onChange={this.handleChange}
+                value={this.props.allData.skills}
                 placeholder="Skill Name"
               ></input>
             </li>

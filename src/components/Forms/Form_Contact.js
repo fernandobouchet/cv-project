@@ -35,8 +35,6 @@ class FormContact extends Component {
   };
 
   render() {
-    const { contactData } = this.state;
-
     return (
       <div className="contact-form-container form-container">
         <div className="title-container">
@@ -53,7 +51,7 @@ class FormContact extends Component {
               onChange={(e) => {
                 this.handleChange(e);
               }}
-              value={contactData.email}
+              value={this.props.allData.contactData.email}
               placeholder="Email"
             ></input>
             <input
@@ -62,7 +60,7 @@ class FormContact extends Component {
               onChange={(e) => {
                 this.handleChange(e);
               }}
-              value={contactData.phone}
+              value={this.props.allData.contactData.phone}
               placeholder="Phone"
             ></input>
             <input
@@ -71,7 +69,7 @@ class FormContact extends Component {
               onChange={(e) => {
                 this.handleChange(e);
               }}
-              value={contactData.linkedin}
+              value={this.props.allData.contactData.linkedin}
               placeholder="Linkedin"
             ></input>
             <input
@@ -80,7 +78,7 @@ class FormContact extends Component {
               onChange={(e) => {
                 this.handleChange(e);
               }}
-              value={contactData.github}
+              value={this.props.allData.contactData.github}
               placeholder="Github"
             ></input>
             <input
@@ -89,7 +87,7 @@ class FormContact extends Component {
               onChange={(e) => {
                 this.handleChange(e);
               }}
-              value={contactData.porfolio}
+              value={this.props.allData.contactData.porfolio}
               placeholder="Porfolio"
             ></input>
           </form>

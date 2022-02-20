@@ -39,6 +39,7 @@ class FormAbout extends Component {
           <div className="about-container">
             <textarea
               onChange={this.handleChange}
+              value={this.props.allData.about}
               placeholder="Description"
             ></textarea>
           </div>

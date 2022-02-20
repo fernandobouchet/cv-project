@@ -45,11 +45,12 @@ class FormExperience extends Component {
         </div>
         {!this.state.hidden && (
           <form autoComplete="off" className="form">
-            <div className="year-container">
+            <div className="form-year-container">
               <input
                 type="text"
                 name="from"
                 onChange={this.handleChange}
+                value={this.props.allData.experience.from}
                 placeholder="From"
               ></input>
             </div>
@@ -58,18 +59,21 @@ class FormExperience extends Component {
                 type="text"
                 name="company"
                 onChange={this.handleChange}
+                value={this.props.allData.experience.company}
                 placeholder="Company Name"
               ></input>
               <input
                 type="text"
                 name="position"
                 onChange={this.handleChange}
+                value={this.props.allData.experience.position}
                 placeholder="Position"
               ></input>
               <textarea
                 type="text"
                 name="description"
                 onChange={this.handleChange}
+                value={this.props.allData.experience.description}
                 placeholder="Job Description"
               ></textarea>
             </div>

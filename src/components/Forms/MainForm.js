@@ -11,12 +11,30 @@ class MainForm extends Component {
   render() {
     return (
       <div id="form-container">
-        <FormGeneral generalInfo={this.props.getAllData} />
-        <FormContact generalInfo={this.props.getAllData} />
-        <FormAbout generalInfo={this.props.getAllData} />
-        <FormEducation generalInfo={this.props.getAllData} />
-        <FormExperience generalInfo={this.props.getAllData} />
-        <FormSkills generalInfo={this.props.getAllData} />
+        <FormGeneral
+          generalInfo={this.props.getAllData}
+          allData={this.props.allData}
+        />
+        <FormContact
+          generalInfo={this.props.getAllData}
+          allData={this.props.allData}
+        />
+        <FormAbout
+          generalInfo={this.props.getAllData}
+          allData={this.props.allData}
+        />
+        <FormEducation
+          generalInfo={this.props.getAllData}
+          allData={this.props.allData}
+        />
+        <FormExperience
+          generalInfo={this.props.getAllData}
+          allData={this.props.allData}
+        />
+        <FormSkills
+          generalInfo={this.props.getAllData}
+          allData={this.props.allData}
+        />
       </div>
     );
   }

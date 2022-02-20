@@ -49,6 +49,7 @@ class FormEducation extends Component {
                 type="text"
                 name="institution"
                 onChange={this.handleChange}
+                value={this.props.allData.education.institution}
                 placeholder="Institution Name"
               ></input>
             </div>
@@ -58,6 +59,7 @@ class FormEducation extends Component {
                   type="text"
                   name="from"
                   onChange={this.handleChange}
+                  value={this.props.allData.education.from}
                   placeholder="From"
                 ></input>
                 -
@@ -65,6 +67,7 @@ class FormEducation extends Component {
                   type="text"
                   name="to"
                   onChange={this.handleChange}
+                  value={this.props.allData.education.to}
                   placeholder="To"
                 ></input>
               </div>
@@ -73,6 +76,7 @@ class FormEducation extends Component {
                 type="text"
                 name="degree"
                 onChange={this.handleChange}
+                value={this.props.allData.education.degree}
                 placeholder="Degree"
               ></input>
             </div>

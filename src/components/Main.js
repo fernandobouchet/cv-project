@@ -47,7 +47,6 @@ class Main extends Component {
         ...data,
       },
     });
-    console.log(this.state);
   };
 
   render() {
@@ -55,7 +54,7 @@ class Main extends Component {
     return (
       <div>
         <div id="main-container">
-          <MainForm getAllData={this.updateState} />
+          <MainForm getAllData={this.updateState} allData={mainData} />
           <MainCV allData={mainData} />
         </div>
         <SubmitButton getAllData={this.updateState} />
