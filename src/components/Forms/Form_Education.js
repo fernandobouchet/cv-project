@@ -11,6 +11,7 @@ class FormEducation extends Component {
         from: "",
         to: "",
       },
+      hidden: true,
     };
   }
 
@@ -26,44 +27,57 @@ class FormEducation extends Component {
     );
   };
 
+  showHideForm = () => {
+    this.setState({
+      hidden: this.state.hidden ? false : true,
+    });
+  };
+
   render() {
     return (
       <div className="education-form-container form-container">
-        <h2>Education</h2>
-        <form className="form" autoComplete="off">
-          <div className="name-titles">
-            <input
-              type="text"
-              name="institution"
-              onChange={this.handleChange}
-              placeholder="Institution Name"
-            ></input>
-          </div>
-          <div className="more-info-container">
-            <div className="year-container">
+        <div className="title-container">
+          <h2>Education</h2>
+          <button className="hide-show-button" onClick={this.showHideForm}>
+            {!this.state.hidden ? "Hide" : "Show"}
+          </button>
+        </div>
+        {!this.state.hidden && (
+          <form className="form" autoComplete="off">
+            <div className="name-titles">
               <input
                 type="text"
-                name="from"
+                name="institution"
                 onChange={this.handleChange}
-                placeholder="From"
-              ></input>
-              -
-              <input
-                type="text"
-                name="to"
-                onChange={this.handleChange}
-                placeholder="To"
+                placeholder="Institution Name"
               ></input>
             </div>
-            |
-            <input
-              type="text"
-              name="degree"
-              onChange={this.handleChange}
-              placeholder="Degree"
-            ></input>
-          </div>
-        </form>
+            <div className="more-info-container">
+              <div className="year-container">
+                <input
+                  type="text"
+                  name="from"
+                  onChange={this.handleChange}
+                  placeholder="From"
+                ></input>
+                -
+                <input
+                  type="text"
+                  name="to"
+                  onChange={this.handleChange}
+                  placeholder="To"
+                ></input>
+              </div>
+              |
+              <input
+                type="text"
+                name="degree"
+                onChange={this.handleChange}
+                placeholder="Degree"
+              ></input>
+            </div>
+          </form>
+        )}
       </div>
     );
   }

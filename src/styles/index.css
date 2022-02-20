@@ -89,3 +89,8 @@ textarea {
   display: flex;
   flex-direction: column;
 }
+
+.title-container {
+  display: flex;
+  justify-content: space-between;
+}

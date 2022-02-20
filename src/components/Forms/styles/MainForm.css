@@ -14,3 +14,7 @@
 .skills-container {
   border-style: none;
 }
+
+.hide-show-button {
+  border-color: transparent;
+}

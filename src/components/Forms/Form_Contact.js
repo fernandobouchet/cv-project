@@ -12,6 +12,7 @@ class FormContact extends Component {
         github: "",
         porfolio: "",
       },
+      hidden: true,
     };
   }
 
@@ -27,59 +28,72 @@ class FormContact extends Component {
     );
   };
 
+  showHideForm = () => {
+    this.setState({
+      hidden: this.state.hidden ? false : true,
+    });
+  };
+
   render() {
     const { contactData } = this.state;
 
     return (
       <div className="contact-form-container form-container">
-        <h2>Contact</h2>
-        <form className="form" autoComplete="off">
-          <input
-            type="text"
-            name="email"
-            onChange={(e) => {
-              this.handleChange(e);
-            }}
-            value={contactData.email}
-            placeholder="Email"
-          ></input>
-          <input
-            type="text"
-            name="phone"
-            onChange={(e) => {
-              this.handleChange(e);
-            }}
-            value={contactData.phone}
-            placeholder="Phone"
-          ></input>
-          <input
-            type="text"
-            name="linkedin"
-            onChange={(e) => {
-              this.handleChange(e);
-            }}
-            value={contactData.linkedin}
-            placeholder="Linkedin"
-          ></input>
-          <input
-            type="text"
-            name="github"
-            onChange={(e) => {
-              this.handleChange(e);
-            }}
-            value={contactData.github}
-            placeholder="Github"
-          ></input>
-          <input
-            type="text"
-            name="porfolio"
-            onChange={(e) => {
-              this.handleChange(e);
-            }}
-            value={contactData.porfolio}
-            placeholder="Porfolio"
-          ></input>
-        </form>
+        <div className="title-container">
+          <h2>Contact</h2>
+          <button className="hide-show-button" onClick={this.showHideForm}>
+            {!this.state.hidden ? "Hide" : "Show"}
+          </button>
+        </div>
+        {!this.state.hidden && (
+          <form className="form" autoComplete="off">
+            <input
+              type="text"
+              name="email"
+              onChange={(e) => {
+                this.handleChange(e);
+              }}
+              value={contactData.email}
+              placeholder="Email"
+            ></input>
+            <input
+              type="text"
+              name="phone"
+              onChange={(e) => {
+                this.handleChange(e);
+              }}
+              value={contactData.phone}
+              placeholder="Phone"
+            ></input>
+            <input
+              type="text"
+              name="linkedin"
+              onChange={(e) => {
+                this.handleChange(e);
+              }}
+              value={contactData.linkedin}
+              placeholder="Linkedin"
+            ></input>
+            <input
+              type="text"
+              name="github"
+              onChange={(e) => {
+                this.handleChange(e);
+              }}
+              value={contactData.github}
+              placeholder="Github"
+            ></input>
+            <input
+              type="text"
+              name="porfolio"
+              onChange={(e) => {
+                this.handleChange(e);
+              }}
+              value={contactData.porfolio}
+              placeholder="Porfolio"
+            ></input>
+          </form>
+        )}
       </div>
     );
   }

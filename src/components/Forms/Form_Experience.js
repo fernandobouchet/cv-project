@@ -12,6 +12,7 @@ class FormExperience extends Component {
         to: "",
         description: "",
       },
+      hidden: true,
     };
   }
 
@@ -27,40 +28,53 @@ class FormExperience extends Component {
     );
   };
 
+  showHideForm = () => {
+    this.setState({
+      hidden: this.state.hidden ? false : true,
+    });
+  };
+
   render() {
     return (
       <div className="company-container form-container">
-        <h2>Experience</h2>
-        <form autoComplete="off" className="form">
-          <div className="year-container">
-            <input
-              type="text"
-              name="from"
-              onChange={this.handleChange}
-              placeholder="From"
-            ></input>
-          </div>
-          <div id="experience-container">
-            <input
-              type="text"
-              name="company"
-              onChange={this.handleChange}
-              placeholder="Company Name"
-            ></input>
-            <input
-              type="text"
-              name="position"
-              onChange={this.handleChange}
-              placeholder="Position"
-            ></input>
-            <textarea
-              type="text"
-              name="description"
-              onChange={this.handleChange}
-              placeholder="Job Description"
-            ></textarea>
-          </div>
-        </form>
+        <div className="title-container">
+          <h2>Experience</h2>
+          <button className="hide-show-button" onClick={this.showHideForm}>
+            {!this.state.hidden ? "Hide" : "Show"}
+          </button>
+        </div>
+        {!this.state.hidden && (
+          <form autoComplete="off" className="form">
+            <div className="year-container">
+              <input
+                type="text"
+                name="from"
+                onChange={this.handleChange}
+                placeholder="From"
+              ></input>
+            </div>
+            <div id="experience-container">
+              <input
+                type="text"
+                name="company"
+                onChange={this.handleChange}
+                placeholder="Company Name"
+              ></input>
+              <input
+                type="text"
+                name="position"
+                onChange={this.handleChange}
+                placeholder="Position"
+              ></input>
+              <textarea
+                type="text"
+                name="description"
+                onChange={this.handleChange}
+                placeholder="Job Description"
+              ></textarea>
+            </div>
+          </form>
+        )}
       </div>
     );
   }

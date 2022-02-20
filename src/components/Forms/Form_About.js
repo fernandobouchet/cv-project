@@ -6,6 +6,7 @@ class FormAbout extends Component {
 
     this.state = {
       about: "",
+      hidden: true,
     };
   }
 
@@ -19,16 +20,29 @@ class FormAbout extends Component {
     );
   };
 
+  showHideForm = () => {
+    this.setState({
+      hidden: this.state.hidden ? false : true,
+    });
+  };
+
   render() {
     return (
       <div className="about-form-container form-container">
-        <h2>About</h2>
-        <div className="about-container">
-          <textarea
-            onChange={this.handleChange}
-            placeholder="Description"
-          ></textarea>
+        <div className="title-container">
+          <h2>About</h2>
+          <button className="hide-show-button" onClick={this.showHideForm}>
+            {!this.state.hidden ? "Hide" : "Show"}
+          </button>
         </div>
+        {!this.state.hidden && (
+          <div className="about-container">
+            <textarea
+              onChange={this.handleChange}
+              placeholder="Description"
+            ></textarea>
+          </div>
+        )}
       </div>
     );
   }

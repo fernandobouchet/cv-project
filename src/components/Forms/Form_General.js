@@ -10,6 +10,7 @@ class FormGeneral extends Component {
         lastName: "",
         title: "",
       },
+      hidden: true,
     };
   }
 
@@ -25,41 +26,54 @@ class FormGeneral extends Component {
     );
   };
 
+  showHideForm = () => {
+    this.setState({
+      hidden: this.state.hidden ? false : true,
+    });
+  };
+
   render() {
     const { generalData } = this.state;
 
     return (
       <div className="general-form-container form-container">
-        <h2>Personal Info</h2>
-        <form className="form" autoComplete="off">
-          <input
-            type="text"
-            name="firstName"
-            onChange={(e) => {
-              this.handleChange(e);
-            }}
-            value={generalData.firstName}
-            placeholder="First Name"
-          ></input>
-          <input
-            type="text"
-            name="lastName"
-            onChange={(e) => {
-              this.handleChange(e);
-            }}
-            value={generalData.lastName}
-            placeholder="Last Name"
-          ></input>
-          <input
-            type="text"
-            name="title"
-            onChange={(e) => {
-              this.handleChange(e);
-            }}
-            value={generalData.title}
-            placeholder="Title"
-          ></input>
-        </form>
+        <div className="title-container">
+          <h2>Personal Info</h2>
+          <button className="hide-show-button" onClick={this.showHideForm}>
+            {!this.state.hidden ? "Hide" : "Show"}
+          </button>
+        </div>
+        {!this.state.hidden && (
+          <form className="form" autoComplete="off">
+            <input
+              type="text"
+              name="firstName"
+              onChange={(e) => {
+                this.handleChange(e);
+              }}
+              value={generalData.firstName}
+              placeholder="First Name"
+            ></input>
+            <input
+              type="text"
+              name="lastName"
+              onChange={(e) => {
+                this.handleChange(e);
+              }}
+              value={generalData.lastName}
+              placeholder="Last Name"
+            ></input>
+            <input
+              type="text"
+              name="title"
+              onChange={(e) => {
+                this.handleChange(e);
+              }}
+              value={generalData.title}
+              placeholder="Title"
+            ></input>
+          </form>
+        )}
       </div>
     );
   }
